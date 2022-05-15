@@ -1,0 +1,28 @@
+import random
+toplam=0
+hak=3
+sayı=random.randint(10,200)
+
+for i in range(3):
+    print("Seçilen sayı 10 ile 200 arasındadır.")
+    a = int(input("Sayı giriniz: "))
+    b = int(input("Sayı giriniz: "))
+    c = int(input("Sayı giriniz: "))
+    toplam=a+b+c
+    if toplam<sayı:
+        hak=hak-1
+        if hak<1:
+            print(f"Tahminleriniz tutmadı, tekrar deneyiniz. Doğru cevap: {sayı}")
+            break
+        else:
+            print(f"Tahmin ettiğiniz sayıların toplamı seçilen sayıdan KÜÇÜK. Kalan hakkınız: {hak} ")
+    elif toplam>sayı:
+        hak=hak-1
+        if hak<1:
+            print(f"Tahminleriniz tutmadı, tekrar deneyiniz. Doğru cevap: {sayı}")
+            break
+        else:
+            print(f"Tahmin ettiğiniz sayıların toplamı seçilen sayıdan BÜYÜK. Kalan hakkınız: {hak} ")
+    else:
+        print("TAHMİNLERİNİZİN TOPLAMI= SEÇİLEN SAYI")
+        break
