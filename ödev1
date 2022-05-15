@@ -1,0 +1,10 @@
+import random
+harfler="abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ1234567890<>£${[]\|"
+sifre=""
+
+for i in range(4):
+    for a in range(4):
+        sayi=random.randint(0,80)
+        sifre+=harfler[sayi]
+        str(sifre)
+print(sifre)
