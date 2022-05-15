@@ -1,10 +1,11 @@
 import random
 harfler="abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ1234567890<>£${[]\|"
 sifre=""
-
-for i in range(4):
-    for a in range(4):
-        sayi=random.randint(0,80)
-        sifre+=harfler[sayi]
-        str(sifre)
-print(sifre)
+sifreler=[]
+sfr_adedi=int(input("Oluşturmak istediğiniz şifre adedini giriniz: "))
+for i in range(sfr_adedi):
+    for a in range(16):
+        sifre+=harfler[random.randint(0,len(harfler)-1)]
+    sifreler.append(sifre)
+    sifre=""
+print(sifreler)
